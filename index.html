@@ -4,21 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Спасибо за всё</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+color: #1e2933;
+}
+
+.container {
+max-width: 880px;
+margin: 0 auto;
+padding: 50px 20px;
+}
+
+.hero {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.hero h1 {
+font-size: 32px;
+margin-bottom: 12px;
+font-weight: 600;
+}
+
+.subtitle {
+color: #5f6c72;
+line-height: 1.5;
+}
+
+.small {
+color: #8a959b;
+font-size: 14px;
+margin-top: 10px;
+}
+
+.stats h2 {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.cards {
+display: grid;
+gap: 20px;
+}
+
+.card {
+background: rgba(255,255,255,0.6);
+backdrop-filter: blur(6px);
+border-radius: 16px;
+padding: 20px;
+text-align: center;
+border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-top {
+font-size: 13px;
+color: #7a868c;
+margin-bottom: 10px;
+}
+
+.card-number {
+font-size: 34px;
+font-weight: 700;
+margin-bottom: 5px;
+}
+
+.card-label {
+color: #6c777c;
+}
+
+.thanks {
+margin-top: 50px;
+text-align: center;
+color: #4d5960;
+line-height: 1.6;
+}
+
+.footer {
+text-align: center;
+margin-top: 60px;
+font-size: 13px;
+color: #9aa5ab;
+}
+
+@media(min-width:700px){
+.cards{
+grid-template-columns:1fr 1fr;
+}
+}
+</style>
+
 </head>
 <body>
+
 <div class="container">
 
-<header class="hero fade-in">
+<div class="hero">
 <h1>Спасибо за NONE_MONTHS месяцев вместе! ❤️</h1>
-<p class="subtitle">
+<div class="subtitle">
 Проект «Бот домашнего задания» завершил работу.<br>
 Спасибо каждому, кто был с ним всё это время.
-</p>
-<p class="small">Этот путь подошёл к концу, но он точно был не зря.</p>
-</header>
+</div>
+<div class="small">
+Этот путь подошёл к концу, но он точно был не зря.
+</div>
+</div>
 
-<section class="stats fade-in">
+<div class="stats">
 <h2>За это время было:</h2>
 
 <div class="cards">
@@ -54,23 +149,20 @@
 </div>
 
 </div>
-</section>
+</div>
 
-<section class="thanks fade-in">
-<p>
+<div class="thanks">
 Спасибо каждому, кто пользовался ботом ❤️<br>
 Кто смотрел домашку, проверял расписание, вступал в классы, играл в ребусы
 и просто был частью этого проекта.<br>
 Этот бот был сделан с желанием быть полезным — и именно вы дали ему смысл.
-</p>
-</section>
+</div>
 
-<footer class="footer fade-in">
+<div class="footer">
 Temo4ka4Bot 3.3
-</footer>
+</div>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
