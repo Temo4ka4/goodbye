@@ -1,8 +1,10 @@
 body {
 margin: 0;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-background: #0f1115;
-color: #fff;
+background: radial-gradient(circle at 20% 10%, rgba(34,197,94,0.08), transparent 40%),
+            radial-gradient(circle at 80% 90%, rgba(16,185,129,0.08), transparent 40%),
+            #0f1a17;
+color: #e5e7eb;
 }
 
 .container {
@@ -11,9 +13,11 @@ margin: 0 auto;
 padding: 40px 20px;
 }
 
+/* HERO */
+
 .hero {
 text-align: center;
-margin-bottom: 40px;
+margin-bottom: 50px;
 }
 
 .hero h1 {
@@ -22,20 +26,24 @@ margin-bottom: 15px;
 }
 
 .subtitle {
-color: #cfcfcf;
+color: #b8c2bd;
 line-height: 1.5;
 }
 
 .small {
-color: #8f8f8f;
+color: #7c8a84;
 font-size: 14px;
 margin-top: 10px;
 }
+
+/* STATS */
 
 .stats h2 {
 text-align: center;
 margin-bottom: 30px;
 }
+
+/* CARDS GRID */
 
 .cards {
 display: grid;
@@ -43,45 +51,76 @@ grid-template-columns: 1fr;
 gap: 20px;
 }
 
+/* CARD */
+
 .card {
-background: #171a20;
-padding: 20px;
-border-radius: 16px;
+background: linear-gradient(180deg, #162521 0%, #13201c 100%);
+padding: 22px;
+border-radius: 18px;
 text-align: center;
+border: 1px solid rgba(34,197,94,0.12);
+box-shadow:
+0 0 0 1px rgba(0,0,0,0.2),
+0 10px 25px rgba(0,0,0,0.35),
+0 0 25px rgba(34,197,94,0.04);
+transition: 0.25s ease;
 }
 
+.card:hover {
+transform: translateY(-2px);
+box-shadow:
+0 0 0 1px rgba(34,197,94,0.15),
+0 15px 35px rgba(0,0,0,0.45),
+0 0 35px rgba(34,197,94,0.07);
+}
+
+/* INNER LABEL */
+
 .card-top {
-background: #20242c;
+background: rgba(34,197,94,0.08);
 padding: 8px 12px;
 border-radius: 10px;
 font-size: 13px;
-color: #bdbdbd;
-margin-bottom: 15px;
+color: #9fb1a8;
+margin-bottom: 16px;
+border: 1px solid rgba(34,197,94,0.12);
 }
+
+/* NUMBER */
 
 .card-number {
-font-size: 32px;
-font-weight: bold;
-margin-bottom: 5px;
+font-size: 34px;
+font-weight: 600;
+margin-bottom: 6px;
+color: #d1fae5;
+letter-spacing: 0.5px;
 }
+
+/* LABEL */
 
 .card-label {
-color: #9f9f9f;
+color: #7c8a84;
 }
 
+/* THANKS */
+
 .thanks {
-margin-top: 40px;
+margin-top: 50px;
 text-align: center;
 line-height: 1.6;
-color: #cfcfcf;
+color: #b8c2bd;
 }
+
+/* FOOTER */
 
 .footer {
 text-align: center;
-margin-top: 40px;
+margin-top: 45px;
 font-size: 13px;
-color: #666;
+color: #6b7a73;
 }
+
+/* FADE */
 
 .fade-in {
 opacity: 0;
@@ -93,6 +132,8 @@ transition: all .6s ease;
 opacity: 1;
 transform: translateY(0);
 }
+
+/* DESKTOP GRID */
 
 @media(min-width: 700px) {
 .cards {
