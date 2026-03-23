@@ -18,90 +18,93 @@ body {
       transparent 10px
     ),
     linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-  color: #e0e0e0;
+  color: #a3a3a3; /* Базовый цвет текста — светло-серый, хорошо читается на тёмном фоне */
 }
 
 .container {
-max-width: 880px;
-margin: 0 auto;
-padding: 50px 20px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 50px 20px;
 }
 
 .hero {
-text-align: center;
-margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .hero h1 {
-font-size: 32px;
-margin-bottom: 12px;
-font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ffffff; /* Яркий белый для главного заголовка — максимум контраста */
 }
 
 .subtitle {
-color: #5f6c72;
-line-height: 1.5;
+  color: #787878; /* Средне-серый для подзаголовка — менее выразительно, но читаемо */
+  line-height: 1.5;
 }
 
 .small {
-color: #8a959b;
-font-size: 14px;
-margin-top: 10px;
+  color: #999999; /* Светло-серый для мелкого текста — не отвлекает */
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .stats h2 {
-text-align: center;
-margin-bottom: 35px;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #cccccc; /* Светло-серый для заголовков блоков статистики */
 }
 
 .cards {
-display: grid;
-gap: 20px;
+  display: grid;
+  gap: 20px;
 }
 
 .card {
-background: rgba(255,255,255,0.6);
-backdrop-filter: blur(6px);
-border-radius: 16px;
-padding: 20px;
-text-align: center;
-border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card-top {
-font-size: 13px;
-color: #7a868c;
-margin-bottom: 10px;
+  font-size: 13px;
+  color: #666666; /* Тёмно-серый для описательного текста в карточках */
+  margin-bottom: 10px;
 }
 
 .card-number {
-font-size: 34px;
-font-weight: 700;
-margin-bottom: 5px;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #ffffff; /* Белый для крупных цифр — максимальная читаемость */
 }
 
 .card-label {
-color: #6c777c;
+  color: #888888; /* Средне-серый для подписей под цифрами */
 }
 
 .thanks {
-margin-top: 50px;
-text-align: center;
-color: #4d5960;
-line-height: 1.6;
+  margin-top: 50px;
+  text-align: center;
+  color: #aaaaaa; /* Светло-серый для благодарственного текста */
+  line-height: 1.6;
 }
 
 .footer {
-text-align: center;
-margin-top: 60px;
-font-size: 13px;
-color: #9aa5ab;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #777777; /* Тёмно-серый для футера — минимально заметен */
 }
 
-@media(min-width:700px){
-.cards{
-grid-template-columns:1fr 1fr;
-}
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
 
