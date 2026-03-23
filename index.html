@@ -18,7 +18,7 @@ body {
       transparent 10px
     ),
     linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-  color: #a3a3a3; /* Базовый цвет текста — светло-серый, хорошо читается на тёмном фоне */
+  color: #eeeeee; /* Базовый цвет текста — светло-серый, отлично читается на тёмном фоне */
 }
 
 .container {
@@ -36,16 +36,17 @@ body {
   font-size: 32px;
   margin-bottom: 12px;
   font-weight: 600;
-  color: #ffffff; /* Яркий белый для главного заголовка — максимум контраста */
+  color: #ffffff; /* Яркий белый для главного заголовка */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Лёгкая тень для выделения */
 }
 
 .subtitle {
-  color: #787878; /* Средне-серый для подзаголовка — менее выразительно, но читаемо */
+  color: #aaaaaa; /* Средне-светлый серый для подзаголовка */
   line-height: 1.5;
 }
 
 .small {
-  color: #999999; /* Светло-серый для мелкого текста — не отвлекает */
+  color: #cccccc; /* Светло-серый для мелкого текста */
   font-size: 14px;
   margin-top: 10px;
 }
@@ -53,7 +54,7 @@ body {
 .stats h2 {
   text-align: center;
   margin-bottom: 35px;
-  color: #cccccc; /* Светло-серый для заголовков блоков статистики */
+  color: #eeeeee; /* Светло-серый для заголовков блоков статистики */
 }
 
 .cards {
@@ -72,7 +73,7 @@ body {
 
 .card-top {
   font-size: 13px;
-  color: #666666; /* Тёмно-серый для описательного текста в карточках */
+  color: #888888; /* Тёмно-серый для описательного текста в карточках */
   margin-bottom: 10px;
 }
 
@@ -80,17 +81,18 @@ body {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #ffffff; /* Белый для крупных цифр — максимальная читаемость */
+  color: #ffffff; /* Белый для крупных цифр */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Тень для цифр — сильнее выделяется */
 }
 
 .card-label {
-  color: #888888; /* Средне-серый для подписей под цифрами */
+  color: #aaaaaa; /* Средне-светлый серый для подписей под цифрами */
 }
 
 .thanks {
   margin-top: 50px;
   text-align: center;
-  color: #aaaaaa; /* Светло-серый для благодарственного текста */
+  color: #e0e0e0; /* Светло-серый для благодарственного текста */
   line-height: 1.6;
 }
 
@@ -98,7 +100,7 @@ body {
   text-align: center;
   margin-top: 60px;
   font-size: 13px;
-  color: #777777; /* Тёмно-серый для футера — минимально заметен */
+  color: #999999; /* Тёмно-серый для футера — минимально заметен */
 }
 
 @media (min-width: 700px) {
@@ -106,6 +108,7 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 </style>
 
 </head>
