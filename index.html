@@ -6,6 +6,27 @@
 <title>Спасибо за всё</title>
 
 <style>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  items.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 70}ms`;
+    observer.observe(item);
+  });
+});
+  
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -55,6 +76,26 @@ body {
   text-align: center;
   margin-bottom: 35px;
   color: #eeeeee; /* Светло-серый для заголовков блоков статистики */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .history {
@@ -133,99 +174,94 @@ body {
 
 <div class="container">
 
-<div class="hero">
-<h1>Спасибо за 6 месяцев вместе! ❤️</h1>
-<div class="subtitle">
-Проект «Бот домашнего задания» завершил работу.<br>
-Спасибо каждому, кто был с ним всё это время.
-</div>
-<div class="small">
-Этот путь подошёл к концу, но он точно был не зря.
-</div>
-</div>
-
-<div class="stats">
-<h2>За это время было:</h2>
-
-<div class="cards">
-
-<div class="card">
-<div class="card-top">За это время набралось пользователей:</div>
-<div class="card-number">NONE_USERS</div>
-<div class="card-label">пользователей</div>
+<div class="hero reveal">
+  <h1 class="reveal">Спасибо за 6 месяцев вместе! ❤️</h1>
+  <div class="subtitle reveal">
+    Проект «Бот домашнего задания» завершил работу.<br>
+    Спасибо каждому, кто был с ним всё это время.
+  </div>
+  <div class="small reveal">
+    Этот путь подошёл к концу, но он точно был не зря.
+  </div>
 </div>
 
-<div class="card">
-<div class="card-top">За это время было добавлено ДЗ:</div>
-<div class="card-number">410</div>
-<div class="card-label">домашних заданий</div>
-</div>
-
-<div class="card">
-<div class="card-top">За это время было создано классов:</div>
-<div class="card-number">10</div>
-<div class="card-label">классов</div>
-</div>
-
-<div class="card">
-<div class="card-top">Бот проработал:</div>
-<div class="card-number">182</div>
-<div class="card-label">дня</div>
-</div>
-
-<div class="card">
-<div class="card-top">Всего действий в боте:</div>
-<div class="card-number">2700</div>
-<div class="card-label">действий</div>
-</div>
-
-
-</div>
-</div>
-
-<div class="thanks">
-Спасибо каждому, кто пользовался ботом ❤️<br>
-Кто смотрел домашку, проверял расписание, и просто был частью этого проекта.<br>
-Этот бот был сделан с желанием быть полезным - и именно вы дали ему смысл.<br> <br>
-Особенно хочется выразить благодарность Кириллу, кто зародил данную идею и воплотил её в жизнь!<br>
-Только благодаря Кириллу и его идеи этот бот вообще работал! Ниже, можете увидеть общую историю бота с учётом работы под руководством Кирилла!
-</div>
-
-<div class="history">
-  <h2>История бота</h2>
+<div class="stats reveal">
+  <h2 class="reveal">За это время было:</h2>
 
   <div class="cards">
+    <div class="card reveal">
+      <div class="card-top">За это время набралось пользователей:</div>
+      <div class="card-number">NONE_USERS</div>
+      <div class="card-label">пользователей</div>
+    </div>
 
-    <div class="card">
+    <div class="card reveal">
+      <div class="card-top">За это время было добавлено ДЗ:</div>
+      <div class="card-number">410</div>
+      <div class="card-label">домашних заданий</div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-top">За это время было создано классов:</div>
+      <div class="card-number">10</div>
+      <div class="card-label">классов</div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-top">Бот проработал:</div>
+      <div class="card-number">182</div>
+      <div class="card-label">дня</div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-top">Всего действий в боте:</div>
+      <div class="card-number">2700</div>
+      <div class="card-label">действий</div>
+    </div>
+  </div>
+</div>
+
+<div class="thanks reveal">
+  Спасибо каждому, кто пользовался ботом ❤️<br>
+  Кто смотрел домашку, проверял расписание, и просто был частью этого проекта.<br>
+  Этот бот был сделан с желанием быть полезным - и именно вы дали ему смысл.<br><br>
+  Особенно хочется выразить благодарность Кириллу, кто зародил данную идею и воплотил её в жизнь!<br>
+  Только благодаря Кириллу и его идеи этот бот вообще работал! Ниже, можете увидеть общую историю бота с учётом работы под руководством Кирилла!
+</div>
+
+<div class="history reveal">
+  <h2 class="reveal">История бота</h2>
+
+  <div class="cards">
+    <div class="card reveal">
       <div class="card-top">Бот начал работу:</div>
       <div class="card-number">14.09.2023</div>
       <div class="card-label">Под руководством Кирилла</div>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-top">Бот прекратил работу:</div>
       <div class="card-number">19.01.2025</div>
       <div class="card-label">Под руководством Кирилла</div>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-top">Под руководством Кирилла бот проработал:</div>
       <div class="card-number">494</div>
-      <div class="card-label">Дня</div>
+      <div class="card-label">дня</div>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-top">Всего бот проработал:</div>
       <div class="card-number">676</div>
-      <div class="card-label">Дней</div>
+      <div class="card-label">дней</div>
     </div>
-
   </div>
 </div>
 
-<div class="footer">
-@tatarinovkgBot - @temo4ka4bot<br>
-Бот домашнего задания ❤️
+<div class="footer reveal">
+  @tatarinovkgBot - @temo4ka4bot<br>
+  Бот домашнего задания ❤️
 </div>
 
 </div>
